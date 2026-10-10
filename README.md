@@ -40,9 +40,18 @@
 
 ---
 
-## اللقطات / Screenshots
+## Screenshots / لقطات الشاشة
 
-(سيتم إضافة الصور قريبًا) / (Screenshots coming soon)
+### 🖥️ Main Screen / الشاشة الرئيسية
+![Easy Main Screen](assets/screenshots/main.jpg)
+
+### 🤖 AI Search / البحث بالذكاء الاصطناعي
+![AI Search](assets/screenshots/ai-search.jpg)
+
+### 🔍 Auto-Discovery Scanner / الماسح التلقائي
+![Scanner](assets/screenshots/scan.jpg)
+
+**ملاحظة:** إذا لم تظهر أي صورة، فهي قيد الإضافة / If any image is missing, it is being added.
 
 ---
 
