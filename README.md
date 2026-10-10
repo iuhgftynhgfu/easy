@@ -1,8 +1,10 @@
 # Easy
 
-<p align="center">
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Rust](https://img.shields.io/badge/Rust-1.98+-orange.svg)](https://www.rust-lang.org/) [![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20Android-green.svg)](https://termux.com/) [![Version](https://img.shields.io/badge/Version-0.1.0-blue.svg)](https://github.com/iuhgftynhgfu/easy/releases) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/iuhgftynhgfu/easy/pulls)
-</p>
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Rust](https://img.shields.io/badge/Rust-1.98+-orange.svg)
+![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20Android-green.svg)
+![Version](https://img.shields.io/badge/Version-0.1.0-blue.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 <p align="center">
   <img src="assets/logo.png" alt="Easy - Command Hub for Termux" width="600">
