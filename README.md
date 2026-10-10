@@ -1,13 +1,5 @@
 # Easy
 
-<pre>
-<span style="color:#00C8FF">███████</span> <span style="color:#50DC78">█████ </span> <span style="color:#FFC832">███████</span> <span style="color:#FF69B4">██   ██</span>
-<span style="color:#00C8FF">██     </span> <span style="color:#50DC78">██  ██</span> <span style="color:#FFC832">██     </span> <span style="color:#FF69B4"> ██ ██ </span>
-<span style="color:#00C8FF">█████  </span> <span style="color:#50DC78">███████</span> <span style="color:#FFC832">███████</span> <span style="color:#FF69B4">  ███  </span>
-<span style="color:#00C8FF">██     </span> <span style="color:#50DC78">██   ██</span> <span style="color:#FFC832">     ██</span> <span style="color:#FF69B4"> ██ ██ </span>
-<span style="color:#00C8FF">███████</span> <span style="color:#50DC78">██   ██</span> <span style="color:#FFC832">███████</span> <span style="color:#FF69B4">██   ██</span>
-</pre>
-
 <p align="center">
   <img src="assets/logo.png" alt="Easy - Command Hub for Termux" width="600">
 </p>
