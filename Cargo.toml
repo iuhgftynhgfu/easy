@@ -1,0 +1,41 @@
+[package]
+name = "easy"
+version = "0.1.0"
+edition = "2021"
+authors = ["You"]
+description = "A unified TUI command hub for Termux"
+license = "MIT"
+
+[[bin]]
+name = "easy"
+path = "src/main.rs"
+
+[dependencies]
+# TUI
+ratatui = "0.29"
+crossterm = "0.28"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Error handling
+anyhow = "1"
+
+# Regex for --help parsing
+regex = "1"
+
+# Fuzzy search
+nucleo = "0.5"
+
+# HTTP client (AI)
+reqwest = { version = "0.12", features = ["blocking", "json"] }
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

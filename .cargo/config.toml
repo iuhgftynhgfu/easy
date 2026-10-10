@@ -1,0 +1,5 @@
+[build]
+target-dir = "/data/data/com.termux/files/home/.easy-build"
+
+[net]
+git-fetch-with-cli = true

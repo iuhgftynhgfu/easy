@@ -1,0 +1,15 @@
+/target
+**/*.rs.bk
+*.pdb
+
+# Easy-specific
+.env
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Local scratch projects
+/Hello-World

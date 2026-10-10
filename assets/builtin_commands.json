@@ -1,0 +1,642 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "pkg",
+      "name": "Package Management",
+      "icon": "📦",
+      "commands": [
+        {
+          "id": "bi-pkg-install",
+          "name_en": "Install Package",
+          "command": "pkg install <name>",
+          "tool": "pkg",
+          "category": "pkg",
+          "subcategory": "install",
+          "description_en": "Install a Termux package by name",
+          "placeholders": [{"name": "name", "description": "Package name"}],
+          "tags": ["pkg", "install", "package", "termux"]
+        },
+        {
+          "id": "bi-pkg-uninstall",
+          "name_en": "Uninstall Package",
+          "command": "pkg uninstall <name>",
+          "tool": "pkg",
+          "category": "pkg",
+          "subcategory": "remove",
+          "description_en": "Remove an installed Termux package",
+          "placeholders": [{"name": "name", "description": "Package name"}],
+          "tags": ["pkg", "uninstall", "remove"]
+        },
+        {
+          "id": "bi-pkg-update-all",
+          "name_en": "Update All Packages",
+          "command": "pkg update && pkg upgrade -y",
+          "tool": "pkg",
+          "category": "pkg",
+          "subcategory": "update",
+          "description_en": "Update and upgrade all packages",
+          "placeholders": [],
+          "tags": ["pkg", "update", "upgrade"]
+        },
+        {
+          "id": "bi-pkg-search",
+          "name_en": "Search Package",
+          "command": "pkg search <term>",
+          "tool": "pkg",
+          "category": "pkg",
+          "subcategory": "search",
+          "description_en": "Search for a package by keyword",
+          "placeholders": [{"name": "term", "description": "Search term"}],
+          "tags": ["pkg", "search", "find"]
+        },
+        {
+          "id": "bi-pkg-list-installed",
+          "name_en": "List Installed",
+          "command": "pkg list-installed",
+          "tool": "pkg",
+          "category": "pkg",
+          "subcategory": "list",
+          "description_en": "List installed packages",
+          "placeholders": [],
+          "tags": ["pkg", "list", "installed"]
+        }
+      ]
+    },
+    {
+      "id": "langs",
+      "name": "Languages",
+      "icon": "💻",
+      "commands": [
+        {
+          "id": "bi-lang-python",
+          "name_en": "Install Python 3",
+          "command": "pkg install python -y",
+          "tool": "pkg",
+          "category": "langs",
+          "subcategory": "python",
+          "description_en": "Install Python 3 interpreter",
+          "placeholders": [],
+          "tags": ["python", "install", "lang"]
+        },
+        {
+          "id": "bi-lang-nodejs",
+          "name_en": "Install Node.js LTS",
+          "command": "pkg install nodejs-lts -y",
+          "tool": "pkg",
+          "category": "langs",
+          "subcategory": "nodejs",
+          "description_en": "Install Node.js LTS and npm",
+          "placeholders": [],
+          "tags": ["nodejs", "node", "npm", "install"]
+        },
+        {
+          "id": "bi-lang-rust",
+          "name_en": "Install Rust",
+          "command": "pkg install rust -y",
+          "tool": "pkg",
+          "category": "langs",
+          "subcategory": "rust",
+          "description_en": "Install Rust toolchain",
+          "placeholders": [],
+          "tags": ["rust", "cargo", "install"]
+        },
+        {
+          "id": "bi-lang-golang",
+          "name_en": "Install Go",
+          "command": "pkg install golang -y",
+          "tool": "pkg",
+          "category": "langs",
+          "subcategory": "go",
+          "description_en": "Install Go programming language",
+          "placeholders": [],
+          "tags": ["go", "golang", "install"]
+        },
+        {
+          "id": "bi-lang-java",
+          "name_en": "Install OpenJDK 17",
+          "command": "pkg install openjdk-17 -y",
+          "tool": "pkg",
+          "category": "langs",
+          "subcategory": "java",
+          "description_en": "Install Java (OpenJDK 17)",
+          "placeholders": [],
+          "tags": ["java", "jdk", "install"]
+        },
+        {
+          "id": "bi-lang-php",
+          "name_en": "Install PHP",
+          "command": "pkg install php -y",
+          "tool": "pkg",
+          "category": "langs",
+          "subcategory": "php",
+          "description_en": "Install PHP interpreter",
+          "placeholders": [],
+          "tags": ["php", "install"]
+        },
+        {
+          "id": "bi-lang-ruby",
+          "name_en": "Install Ruby",
+          "command": "pkg install ruby -y",
+          "tool": "pkg",
+          "category": "langs",
+          "subcategory": "ruby",
+          "description_en": "Install Ruby interpreter",
+          "placeholders": [],
+          "tags": ["ruby", "install"]
+        },
+        {
+          "id": "bi-lang-clang",
+          "name_en": "Install C/C++ (clang)",
+          "command": "pkg install clang -y",
+          "tool": "pkg",
+          "category": "langs",
+          "subcategory": "cpp",
+          "description_en": "Install Clang C/C++ compiler",
+          "placeholders": [],
+          "tags": ["clang", "cpp", "compiler", "install"]
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "icon": "🔧",
+      "commands": [
+        {
+          "id": "bi-tool-git-clone",
+          "name_en": "Clone Git Repository",
+          "command": "git clone <url>",
+          "tool": "git",
+          "category": "tools",
+          "subcategory": "git",
+          "description_en": "Clone a Git repository",
+          "placeholders": [{"name": "url", "description": "Repo URL"}],
+          "tags": ["git", "clone"]
+        },
+        {
+          "id": "bi-tool-curl-download",
+          "name_en": "Download with curl",
+          "command": "curl -O <url>",
+          "tool": "curl",
+          "category": "tools",
+          "subcategory": "download",
+          "description_en": "Download a file with curl",
+          "placeholders": [{"name": "url", "description": "File URL"}],
+          "tags": ["curl", "download"]
+        },
+        {
+          "id": "bi-tool-wget",
+          "name_en": "Download with wget",
+          "command": "wget <url>",
+          "tool": "wget",
+          "category": "tools",
+          "subcategory": "download",
+          "description_en": "Download a file with wget",
+          "placeholders": [{"name": "url", "description": "File URL"}],
+          "tags": ["wget", "download"]
+        },
+        {
+          "id": "bi-tool-tar-extract",
+          "name_en": "Extract tar.gz",
+          "command": "tar -xzf <file>",
+          "tool": "tar",
+          "category": "tools",
+          "subcategory": "archive",
+          "description_en": "Extract a .tar.gz archive",
+          "placeholders": [{"name": "file", "description": "Archive path"}],
+          "tags": ["tar", "extract", "gzip"]
+        },
+        {
+          "id": "bi-tool-unzip",
+          "name_en": "Extract zip",
+          "command": "unzip <file>",
+          "tool": "unzip",
+          "category": "tools",
+          "subcategory": "archive",
+          "description_en": "Extract a .zip archive",
+          "placeholders": [{"name": "file", "description": "Zip file path"}],
+          "tags": ["unzip", "zip", "extract"]
+        }
+      ]
+    },
+    {
+      "id": "libs",
+      "name": "Libraries",
+      "icon": "📚",
+      "commands": [
+        {
+          "id": "bi-lib-pip",
+          "name_en": "Install Python Package",
+          "command": "pip install <name>",
+          "tool": "pip",
+          "category": "libs",
+          "subcategory": "python",
+          "description_en": "Install a Python library",
+          "placeholders": [{"name": "name", "description": "Package name"}],
+          "tags": ["pip", "python", "install"]
+        },
+        {
+          "id": "bi-lib-npm",
+          "name_en": "Install Node Package",
+          "command": "npm install <name>",
+          "tool": "npm",
+          "category": "libs",
+          "subcategory": "node",
+          "description_en": "Install a Node.js package",
+          "placeholders": [{"name": "name", "description": "Package name"}],
+          "tags": ["npm", "node", "install"]
+        },
+        {
+          "id": "bi-lib-cargo-add",
+          "name_en": "Add Rust Crate",
+          "command": "cargo add <name>",
+          "tool": "cargo",
+          "category": "libs",
+          "subcategory": "rust",
+          "description_en": "Add a crate to current project",
+          "placeholders": [{"name": "name", "description": "Crate name"}],
+          "tags": ["cargo", "rust", "add"]
+        }
+      ]
+    },
+    {
+      "id": "files",
+      "name": "Files",
+      "icon": "📁",
+      "commands": [
+        {
+          "id": "bi-file-list",
+          "name_en": "List All Files",
+          "command": "ls -la",
+          "tool": "ls",
+          "category": "files",
+          "subcategory": "list",
+          "description_en": "List all files with details",
+          "placeholders": [],
+          "tags": ["ls", "list"]
+        },
+        {
+          "id": "bi-file-copy-rec",
+          "name_en": "Copy Recursive",
+          "command": "cp -r <src> <dst>",
+          "tool": "cp",
+          "category": "files",
+          "subcategory": "copy",
+          "description_en": "Copy directory recursively",
+          "placeholders": [
+            {"name": "src", "description": "Source"},
+            {"name": "dst", "description": "Destination"}
+          ],
+          "tags": ["cp", "copy"]
+        },
+        {
+          "id": "bi-file-remove-rec",
+          "name_en": "Remove Recursive",
+          "command": "rm -rf <path>",
+          "tool": "rm",
+          "category": "files",
+          "subcategory": "delete",
+          "description_en": "Force-delete a path (careful!)",
+          "placeholders": [{"name": "path", "description": "Path"}],
+          "tags": ["rm", "remove", "delete"]
+        },
+        {
+          "id": "bi-file-find",
+          "name_en": "Find Files by Name",
+          "command": "find . -name \"<pattern>\"",
+          "tool": "find",
+          "category": "files",
+          "subcategory": "search",
+          "description_en": "Find files matching a pattern",
+          "placeholders": [{"name": "pattern", "description": "Pattern"}],
+          "tags": ["find", "search"]
+        },
+        {
+          "id": "bi-file-grep",
+          "name_en": "Search File Contents",
+          "command": "grep -r \"<text>\" .",
+          "tool": "grep",
+          "category": "files",
+          "subcategory": "search",
+          "description_en": "Search text in files recursively",
+          "placeholders": [{"name": "text", "description": "Text"}],
+          "tags": ["grep", "search"]
+        }
+      ]
+    },
+    {
+      "id": "system",
+      "name": "System",
+      "icon": "🖥️",
+      "commands": [
+        {
+          "id": "bi-sys-df",
+          "name_en": "Disk Usage",
+          "command": "df -h",
+          "tool": "df",
+          "category": "system",
+          "subcategory": "monitor",
+          "description_en": "Show disk space usage",
+          "placeholders": [],
+          "tags": ["df", "disk"]
+        },
+        {
+          "id": "bi-sys-free",
+          "name_en": "Memory Usage",
+          "command": "free -h",
+          "tool": "free",
+          "category": "system",
+          "subcategory": "monitor",
+          "description_en": "Show memory usage",
+          "placeholders": [],
+          "tags": ["free", "memory", "ram"]
+        },
+        {
+          "id": "bi-sys-top",
+          "name_en": "Process Monitor",
+          "command": "top",
+          "tool": "top",
+          "category": "system",
+          "subcategory": "monitor",
+          "description_en": "Monitor processes",
+          "placeholders": [],
+          "tags": ["top", "process"]
+        },
+        {
+          "id": "bi-sys-uname",
+          "name_en": "System Info",
+          "command": "uname -a",
+          "tool": "uname",
+          "category": "system",
+          "subcategory": "info",
+          "description_en": "Show system info",
+          "placeholders": [],
+          "tags": ["uname", "system", "info"]
+        }
+      ]
+    },
+    {
+      "id": "network",
+      "name": "Network",
+      "icon": "🌐",
+      "commands": [
+        {
+          "id": "bi-net-ping",
+          "name_en": "Ping Host",
+          "command": "ping <host>",
+          "tool": "ping",
+          "category": "network",
+          "subcategory": "diagnostic",
+          "description_en": "Ping a host",
+          "placeholders": [{"name": "host", "description": "Host"}],
+          "tags": ["ping", "network"]
+        },
+        {
+          "id": "bi-net-ifconfig",
+          "name_en": "Network Interfaces",
+          "command": "ifconfig",
+          "tool": "ifconfig",
+          "category": "network",
+          "subcategory": "info",
+          "description_en": "Show network interfaces",
+          "placeholders": [],
+          "tags": ["ifconfig", "network"]
+        },
+        {
+          "id": "bi-net-curl-get",
+          "name_en": "HTTP GET",
+          "command": "curl <url>",
+          "tool": "curl",
+          "category": "network",
+          "subcategory": "http",
+          "description_en": "Fetch a URL",
+          "placeholders": [{"name": "url", "description": "URL"}],
+          "tags": ["curl", "http"]
+        },
+        {
+          "id": "bi-net-ssh",
+          "name_en": "SSH Connect",
+          "command": "ssh <user>@<host>",
+          "tool": "ssh",
+          "category": "network",
+          "subcategory": "remote",
+          "description_en": "Connect via SSH",
+          "placeholders": [
+            {"name": "user", "description": "Username"},
+            {"name": "host", "description": "Host"}
+          ],
+          "tags": ["ssh", "remote"]
+        }
+      ]
+    },
+    {
+      "id": "tui",
+      "name": "TUI",
+      "icon": "🎨",
+      "commands": [
+        {
+          "id": "bi-tui-neofetch",
+          "name_en": "System Info Fetch",
+          "command": "neofetch",
+          "tool": "neofetch",
+          "category": "tui",
+          "subcategory": "info",
+          "description_en": "Show system info stylized",
+          "placeholders": [],
+          "tags": ["neofetch", "fetch"]
+        },
+        {
+          "id": "bi-tui-cmatrix",
+          "name_en": "Matrix Rain",
+          "command": "cmatrix",
+          "tool": "cmatrix",
+          "category": "tui",
+          "subcategory": "fun",
+          "description_en": "Matrix-style rain effect",
+          "placeholders": [],
+          "tags": ["cmatrix", "matrix", "fun"]
+        },
+        {
+          "id": "bi-tui-figlet",
+          "name_en": "ASCII Art Text",
+          "command": "figlet <text>",
+          "tool": "figlet",
+          "category": "tui",
+          "subcategory": "fun",
+          "description_en": "Convert text to ASCII art",
+          "placeholders": [{"name": "text", "description": "Text"}],
+          "tags": ["figlet", "ascii", "art"]
+        },
+        {
+          "id": "bi-tui-cowsay",
+          "name_en": "Cow Says",
+          "command": "cowsay <text>",
+          "tool": "cowsay",
+          "category": "tui",
+          "subcategory": "fun",
+          "description_en": "A cow says your text",
+          "placeholders": [{"name": "text", "description": "Text"}],
+          "tags": ["cowsay", "fun"]
+        }
+      ]
+    },
+    {
+      "id": "dev",
+      "name": "Development",
+      "icon": "⚙️",
+      "commands": [
+        {
+          "id": "bi-dev-cargo-new",
+          "name_en": "New Rust Project",
+          "command": "cargo new <name>",
+          "tool": "cargo",
+          "category": "dev",
+          "subcategory": "rust",
+          "description_en": "Create a new Rust project",
+          "placeholders": [{"name": "name", "description": "Project name"}],
+          "tags": ["cargo", "rust", "new"]
+        },
+        {
+          "id": "bi-dev-cargo-build-release",
+          "name_en": "Build Rust (Release)",
+          "command": "cargo build --release",
+          "tool": "cargo",
+          "category": "dev",
+          "subcategory": "rust",
+          "description_en": "Build Rust project in release mode",
+          "placeholders": [],
+          "tags": ["cargo", "rust", "build"]
+        },
+        {
+          "id": "bi-dev-npm-init",
+          "name_en": "Init Node Project",
+          "command": "npm init -y",
+          "tool": "npm",
+          "category": "dev",
+          "subcategory": "node",
+          "description_en": "Initialize a Node project",
+          "placeholders": [],
+          "tags": ["npm", "node", "init"]
+        },
+        {
+          "id": "bi-dev-python-venv",
+          "name_en": "Create Python venv",
+          "command": "python -m venv venv",
+          "tool": "python",
+          "category": "dev",
+          "subcategory": "python",
+          "description_en": "Create a Python virtual environment",
+          "placeholders": [],
+          "tags": ["python", "venv"]
+        },
+        {
+          "id": "bi-dev-git-init",
+          "name_en": "Init Git Repo",
+          "command": "git init",
+          "tool": "git",
+          "category": "dev",
+          "subcategory": "git",
+          "description_en": "Initialize a Git repo",
+          "placeholders": [],
+          "tags": ["git", "init"]
+        },
+        {
+          "id": "bi-dev-git-status",
+          "name_en": "Git Status",
+          "command": "git status",
+          "tool": "git",
+          "category": "dev",
+          "subcategory": "git",
+          "description_en": "Show Git status",
+          "placeholders": [],
+          "tags": ["git", "status"]
+        },
+        {
+          "id": "bi-dev-git-add-all",
+          "name_en": "Git Add All",
+          "command": "git add .",
+          "tool": "git",
+          "category": "dev",
+          "subcategory": "git",
+          "description_en": "Stage all changes",
+          "placeholders": [],
+          "tags": ["git", "add"]
+        },
+        {
+          "id": "bi-dev-git-commit",
+          "name_en": "Git Commit",
+          "command": "git commit -m \"<message>\"",
+          "tool": "git",
+          "category": "dev",
+          "subcategory": "git",
+          "description_en": "Commit staged changes",
+          "placeholders": [{"name": "message", "description": "Commit message"}],
+          "tags": ["git", "commit"]
+        },
+        {
+          "id": "bi-dev-git-push",
+          "name_en": "Git Push",
+          "command": "git push",
+          "tool": "git",
+          "category": "dev",
+          "subcategory": "git",
+          "description_en": "Push commits to remote",
+          "placeholders": [],
+          "tags": ["git", "push"]
+        }
+      ]
+    },
+    {
+      "id": "db",
+      "name": "Databases",
+      "icon": "🗄️",
+      "commands": [
+        {
+          "id": "bi-db-postgres",
+          "name_en": "Install PostgreSQL",
+          "command": "pkg install postgresql -y",
+          "tool": "pkg",
+          "category": "db",
+          "subcategory": "postgres",
+          "description_en": "Install PostgreSQL",
+          "placeholders": [],
+          "tags": ["postgres", "postgresql", "install"]
+        },
+        {
+          "id": "bi-db-mariadb",
+          "name_en": "Install MariaDB",
+          "command": "pkg install mariadb -y",
+          "tool": "pkg",
+          "category": "db",
+          "subcategory": "mysql",
+          "description_en": "Install MariaDB (MySQL)",
+          "placeholders": [],
+          "tags": ["mariadb", "mysql", "install"]
+        },
+        {
+          "id": "bi-db-redis",
+          "name_en": "Install Redis",
+          "command": "pkg install redis -y",
+          "tool": "pkg",
+          "category": "db",
+          "subcategory": "redis",
+          "description_en": "Install Redis",
+          "placeholders": [],
+          "tags": ["redis", "install"]
+        },
+        {
+          "id": "bi-db-sqlite",
+          "name_en": "Install SQLite",
+          "command": "pkg install sqlite -y",
+          "tool": "pkg",
+          "category": "db",
+          "subcategory": "sqlite",
+          "description_en": "Install SQLite",
+          "placeholders": [],
+          "tags": ["sqlite", "install"]
+        }
+      ]
+    }
+  ]
+}
