@@ -814,43 +814,47 @@ pub fn render_ai_search(
 
 /// Startup logo (EASY ASCII art, one color per letter) plus centered tagline.
 pub fn render_logo() -> Vec<Line<'static>> {
-    // Each letter is a separate column-aligned set of glyphs.
+    // Each letter is a separate column-aligned set of glyphs,
+    // padded to 8 chars wide, joined with 2 spaces.
     let e_lines = [
-        "  ███████ ",
-        "  ██      ",
-        "  █████   ",
-        "  ██      ",
-        "  ███████ ",
+        "███████",
+        "██     ",
+        "█████  ",
+        "██     ",
+        "███████",
     ];
     let a_lines = [
-        " █████  ",
-        " ██  ██ ",
-        " ███████",
-        " ██   ██",
-        " ██   ██",
+        " █████ ",
+        "██   ██",
+        "███████",
+        "██   ██",
+        "██   ██",
     ];
     let s_lines = [
-        " ███████",
-        " ██     ",
-        " ███████",
-        "      ██",
-        " ███████",
+        "███████",
+        "██     ",
+        "███████",
+        "     ██",
+        "███████",
     ];
     let y_lines = [
-        " ██   ██",
-        "  ██ ██ ",
-        "   ███  ",
-        "  ██ ██ ",
-        " ██   ██",
+        "██   ██",
+        " ██ ██ ",
+        "  ███  ",
+        "   █   ",
+        "   █   ",
     ];
 
     let mut lines: Vec<Line<'static>> = Vec::new();
     for row in 0..5 {
         lines.push(Line::from(vec![
-            Span::styled(e_lines[row], Style::default().fg(Colors::PRIMARY)),
-            Span::styled(a_lines[row], Style::default().fg(Colors::SUCCESS)),
-            Span::styled(s_lines[row], Style::default().fg(Colors::WARNING)),
-            Span::styled(y_lines[row], Style::default().fg(Colors::ACCENT)),
+            Span::styled(format!("{:<8}", e_lines[row]), Style::default().fg(Colors::PRIMARY)),
+            Span::raw("  ".to_string()),
+            Span::styled(format!("{:<8}", a_lines[row]), Style::default().fg(Colors::SUCCESS)),
+            Span::raw("  ".to_string()),
+            Span::styled(format!("{:<8}", s_lines[row]), Style::default().fg(Colors::WARNING)),
+            Span::raw("  ".to_string()),
+            Span::styled(format!("{:<8}", y_lines[row]), Style::default().fg(Colors::ACCENT)),
         ]));
     }
     lines.push(Line::default());
