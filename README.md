@@ -8,6 +8,10 @@
 <span style="color:#00C8FF">███████</span> <span style="color:#50DC78">██   ██</span> <span style="color:#FFC832">███████</span> <span style="color:#FF69B4">██   ██</span>
 </pre>
 
+<p align="center">
+  <img src="assets/logo.png" alt="Easy - Command Hub for Termux" width="600">
+</p>
+
 **Easy** هو مدير أوامر ذكي يعمل في الطرفية (Terminal)، يجمع أوامرك وأدواتك اليومية في مكان واحد، ويوفر لك بحثًا فوريًا بالذكاء الاصطناعي.
 
 **Easy** is a smart terminal command manager that gathers your everyday commands and tools in one place, with instant AI-powered search.
